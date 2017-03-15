@@ -12,14 +12,11 @@
 <script>
     anychart.onDocumentReady(function() {
 
-
         var chart = anychart.column3d({{ chartData }});
         chart.title({{ chartTitle }});
- 
 
 	chart.animation(true);
 
-    
 	var xAxis = chart.xAxis();
   	xAxis.title("fruits");
   	var yAxis = chart.yAxis();
@@ -35,5 +32,3 @@
 </script>
 </body>
 </html>
-
-
