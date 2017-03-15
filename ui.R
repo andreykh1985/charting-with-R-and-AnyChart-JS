@@ -2,8 +2,6 @@ library(shiny)
 library(RMySQL)
 library(jsonlite)
 
-data1 <- character()
-
 db = dbConnect(MySQL(),
   dbname = "anychart_db",
   host = "localhost", 
@@ -13,6 +11,7 @@ db = dbConnect(MySQL(),
 
 loadData = dbGetQuery(db, "SELECT name, value FROM fruits")
 
+data1 <- character()
 
 #data preparation
 for(var in 1:nrow(loadData)){
